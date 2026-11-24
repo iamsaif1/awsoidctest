@@ -15,7 +15,7 @@ jobs:
         - name: Configure AWS Credentials Using OIDC
           uses: aws-actions/configure-aws-credentials@v4.1.0
           with:
-            aws-region: us-east-1
+            aws-region: ${{ secrets.AWS_Region }}
             role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
 
         - name: Test AWS Credentials
